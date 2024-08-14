@@ -2,16 +2,15 @@ const emailInput = document.querySelector('input');
 const mainContainer = document.getElementById('main-container');
 const inputBtn = document.getElementById('validate-email');
 const successSection = document.getElementById('success-section');
-/*const dismissBtn = ;*/
+const dismissBtn = document.getElementById('dismiss-buttton');
 const errorState = document.getElementById('error-state');
-
-
+let userEmail = document.querySelector('span');
 
 
 const validateEmail = (event)=>{
 
     event.preventDefault();
-    let userEmail = document.getElementById('user-email');
+    
     let emailValue = emailInput.value;
     let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
 
@@ -21,11 +20,16 @@ const validateEmail = (event)=>{
         successSection.style.visibility = 'visible';
         mainContainer.style.visibility = 'hidden';
         userEmail.innerText = emailValue;
-        console.log(emailValue);
     } 
+}
 
-    
+const dismissMessage = (event)=>{
+    successSection.style.visibility = 'hidden';
+    mainContainer.style.visibility = 'visible';
+    emailInput.value = '';
+    errorState.style.visibility = 'hidden';
 }
 
 inputBtn.addEventListener('click', validateEmail);
+dismissBtn.addEventListener('click', dismissMessage);
 
