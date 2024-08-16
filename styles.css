@@ -166,16 +166,43 @@ form button{
 .success-section button:hover{
   box-shadow: 0.2rem 0.5rem 1.1rem var(--Tomato);
   background-color: var(--Tomato);
-
 }
 
-/*
+/* Mobile design */
+
+@media(width < 376px ){
+
+.main-container{
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0;
+}
+
+.image-container img {
+  visibility: hidden;
+}
+
+.image-container{
+  min-height: 265px;
+  width: 340px;
+  background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+
+.information-section{
+  font-size: 0.6rem;
+  padding: 1.9rem;
+  width: 100%;
+}
+
+form{
+  width: 100%;
+  margin-left: 2.2rem;
+}
+
 form input{
-  padding: 0.6rem;
-  background-color: #e0aa96;
-  border: solid #f68d6d;
-  color: #f68d6d;
-  border-radius: 0.3rem;
+  width: 100%;
 }
 
-*/
+}

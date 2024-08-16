@@ -1,0 +1,15 @@
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    border: solid red;
+    min-height: 265px;
+    width: 350px;
+    background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
